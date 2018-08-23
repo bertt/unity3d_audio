@@ -14,4 +14,4 @@ Features:
 
 - Android support tested
 
-<img src="screenshot.jpg"/>
+<img src="screenshot.jpg" width="300"/>
