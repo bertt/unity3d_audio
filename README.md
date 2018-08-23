@@ -10,6 +10,8 @@ Features:
 
 - Record audio using events OnPointerClick, stop recording at OnPointerUp 
 
-- Record audio in wav format, store wav file on local file storage (Application.persistentDataPath)
+- Record audio in wav format, store in wav file (test.wav) on local file storage (Application.persistentDataPath)
 
 - Android support tested
+
+<img src="screenshot.jpg"/>
