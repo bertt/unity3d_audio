@@ -8,7 +8,9 @@ Features:
 
 - 2 buttons, for recording and playing audio
 
-- Record audio using events OnPointerUp, stop recording at clicking OnPointerUp again 
+- Record audio using events OnPointerUp, stop recording at clicking OnPointerUp again
+
+Note: other method using OnPointerDown (start recording), OnPointerUp was not accessible. 
 
 - Record audio in wav format, store in wav file (test.wav) on local file storage (Application.persistentDataPath)
 
