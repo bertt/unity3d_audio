@@ -5,21 +5,26 @@ using UnityEngine.UI;
 
 namespace Assets
 {
-    public class AudioRecord : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+    public class AudioRecord : MonoBehaviour, IPointerUpHandler
     {
+        bool isRecording = false;
+
         AudioClip audioClip;
-
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            audioClip = Microphone.Start(null, false, 10, 44100);
-
-            GetComponentInChildren<Text>().text = "Is recording...";
-        }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            AudioLib.Save("test.wav", audioClip);
-            GetComponentInChildren<Text>().text = "Start recording";
+            if (!isRecording)
+            {
+                audioClip = Microphone.Start(null, false, 10, 44100);
+                GetComponentInChildren<Text>().text = "Is recording...";
+            }
+            else
+            {
+                AudioLib.Save("test.wav", audioClip);
+                GetComponentInChildren<Text>().text = "Start recording";
+            }
+
+            isRecording = !isRecording;
         }
     }
 }
